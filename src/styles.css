@@ -105,11 +105,7 @@ textarea {
   background-color: #e8eeef;
   color: #8a97a0;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-  margin-bottom: 30px;
-}
-
-input[id="name"],
-input[id="email"] {
+  margin-bottom: 20px;
   text-align: right !important;
   font-style: italic !important;
 }
@@ -178,8 +174,17 @@ select:focus {
 @media screen and (min-width: 768px) {
   .flex-wrap {
     align-items: center;
-    justify-content: space-between;
     flex-direction: row;
+  }
+
+  .flex-wrap input,
+  .flex-wrap select {
+    flex-basis: 65%;
+    flex-grow: 1;
+  }
+
+  .flex-wrap label {
+    flex-basis: 30%;
   }
 
   .wrapper {
@@ -200,5 +205,9 @@ select:focus {
     margin: 0 auto;
     margin-bottom: 3px;
     margin-top: 55px;
+  }
+
+  input[id="zip"] {
+    max-width: 30%;
   }
 }
