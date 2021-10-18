@@ -9,12 +9,9 @@
   box-sizing: border-box;
 }
 
-:root {
-  --main-font: "Nunito", sans-serif;
-}
-
 body {
   margin: 0;
+  font-family: "Andada Pro", serif;
 }
 
 h1 {
@@ -48,15 +45,16 @@ fieldset {
 }
 
 form {
-  max-width: 310px;
-  margin: 0px 20px;
+  max-width: 300px;
   border-top: 2px solid black;
   padding: 20px 0 0;
   display: block;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 label {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Andada Pro", serif;
   color: #808080;
 }
 
@@ -84,6 +82,7 @@ footer {
   font-style: italic;
   text-align: center;
   font-size: 1.1em;
+  margin-top: 35px;
 }
 /*===============================================
 PSEUDOCLASSES/PSEUDOELEMENTS
@@ -119,22 +118,31 @@ input[id="zip"] {
   width: 50%;
 }
 
+input:focus,
+textarea:focus,
+select:focus {
+  background-color: white;
+  border: 2px solid lightcoral;
+}
 /*============================================================
                         ELEMENTS    
 =============================================================*/
 .main-container {
   border-bottom: 5px solid black;
-  max-width: 310px;
+  max-width: 300px;
   line-height: 1em;
   margin: 35px 20px 5px;
   padding-bottom: 10px;
   text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5px;
 }
 
 .wrapper {
-  display: block;
   margin: 0 auto;
   max-width: 768px;
+  display: block;
 }
 
 .contact-info {
@@ -159,6 +167,38 @@ input[id="zip"] {
   font-size: 1.2em;
   color: #919191;
 }
+
+.flex-wrap {
+  display: flex;
+  flex-direction: column;
+}
 /*============================================================
                         MEDIA QUERIES    
 =============================================================*/
+@media screen and (min-width: 768px) {
+  .flex-wrap {
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .wrapper {
+    max-width: initial;
+    margin: 0 auto;
+    display: block;
+  }
+
+  form {
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .main-container {
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 3px;
+    margin-top: 55px;
+  }
+}
