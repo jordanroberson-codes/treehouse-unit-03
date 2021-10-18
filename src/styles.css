@@ -39,7 +39,6 @@ h2 {
 
 p {
   color: rgb(145, 145, 145);
-  padding-bottom: 20px;
 }
 
 fieldset {
@@ -68,6 +67,24 @@ legend {
   color: #3e4750;
 }
 
+button {
+  display: block;
+  margin: 0 auto;
+  color: white;
+  background-color: #37dfd1;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5em;
+  height: 60px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+footer {
+  margin: 10px 0 200px;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.1em;
+}
 /*===============================================
 PSEUDOCLASSES/PSEUDOELEMENTS
 ================================================*/
@@ -101,6 +118,7 @@ input[id="email"] {
 input[id="zip"] {
   width: 50%;
 }
+
 /*============================================================
                         ELEMENTS    
 =============================================================*/
@@ -126,7 +144,6 @@ input[id="zip"] {
   padding-right: 0px !important;
   padding-left: 0px !important;
 }
-
 .primary-paragraph {
   font-size: 1.2em;
   line-height: 1.2em;
@@ -138,6 +155,10 @@ input[id="zip"] {
   margin-top: 0;
 }
 
+.text-area-label {
+  font-size: 1.2em;
+  color: #919191;
+}
 /*============================================================
                         MEDIA QUERIES    
 =============================================================*/
