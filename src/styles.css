@@ -76,6 +76,13 @@ button {
   height: 60px;
   width: 100%;
   margin-bottom: 15px;
+  transition: all 150ms ease-in-out;
+}
+
+button:hover {
+  transform: scale(0.9);
+  border: inset 2px solid white;
+  box-shadow: 2px 2px 2px lightcoral;
 }
 footer {
   margin: 10px 0 200px;
