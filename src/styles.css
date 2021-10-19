@@ -114,11 +114,19 @@ input[id="zip"] {
   width: 50%;
 }
 
+input,
+textarea,
+select {
+  transition: all 150ms ease-in-out;
+}
+
 input:focus,
 textarea:focus,
 select:focus {
   background-color: white;
   border: 2px solid lightcoral;
+  box-shadow: 0 0 2px 3px lightcoral, 0 0 2px lightcoral inset;
+  border-radius: 3px;
 }
 /*============================================================
                         ELEMENTS    
@@ -208,6 +216,6 @@ select:focus {
   }
 
   input[id="zip"] {
-    max-width: 30%;
+    max-width: 25%;
   }
 }
